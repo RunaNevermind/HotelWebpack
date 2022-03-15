@@ -1,6 +1,8 @@
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const path = require('path');
+const { option } = require('yargs');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,7 +13,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.resolve('./output.html'),
     },
     compress: true,
     port: 9000,
@@ -27,6 +29,23 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.scss$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options:{},
+          },
+          {
+            loader:"css-loader",
+            options:{},
+          },
+          {
+            loader:"sass-loader",
+            options:{},
+          },
+        ],
+      },
     ],
   },  
   plugins: [
@@ -38,6 +57,9 @@ module.exports = {
     }),
     new HtmlWebpackPugPlugin({
       adjustIndent: true
+    }),
+    new MiniCssExtractPlugin({
+      filename:'style.scss',
     }),
   ],
 };
