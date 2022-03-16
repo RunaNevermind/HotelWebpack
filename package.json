@@ -197,11 +197,7 @@
   },
   "scripts": {
     "dev": "node node_modules/webpack/bin/webpack.js serve --stats-children",
-    "dev2": "npx webpack serve --stats-children",
-    "dev3": "webpack serve --stats-children",
-    "build": "node node_modules/webpack/bin/webpack.js build",
-    "build2": "npx webpack build",
-    "build3": "webpack build"
+    "build": "node node_modules/webpack/bin/webpack.js build"
   },
   "keywords": [],
   "author": "",
