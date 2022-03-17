@@ -16,9 +16,8 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
-  "name": "hotelwebpack",
+  "name": "toxin",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
   },
   "scripts": {
@@ -26,8 +25,8 @@
     "build": "node node_modules/webpack/bin/webpack.js build"
   },
 
-  "keywords": [],
-  "author": "",
+  "keywords": ["фронтенд", "компоненты", "дизайн", "стиль", "toxin"],
+  "author": "RunaNevermind",
   "license": "ISC",
-  "description": ""
+  "description": "Frontend компоненты в фирменном стиле toxin"
 }
