@@ -20,7 +20,8 @@
   },
   "scripts": {
     "dev": "node node_modules/webpack/bin/webpack.js serve --stats-children",
-    "build": "node node_modules/webpack/bin/webpack.js build"
+    "build": "node node_modules/webpack/bin/webpack.js build",
+    "other-static-http-server": "python3 -m http.server --bind=localhost 8080 --directory='.\\dist\\'"
   },
   "keywords": ["фронтенд", "компоненты", "дизайн", "стиль", "toxin"],
   "author": "RunaNevermind",
