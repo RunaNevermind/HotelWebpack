@@ -1,65 +1,37 @@
-const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const path = require('path');
-const { option } = require('yargs');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath:'/',
-  },
-  devServer: {
-    static: {
-      directory: path.resolve('./output.html'),
-    },
-    compress: true,
-    port: 9000,
+    filename: '[name].bundle.js',
   },
   mode: 'development',
   module: {
     rules: [
       {
         test: /\.pug$/,
-        use: [
-          {
-            loader: 'simple-pug-loader'
-          }
-        ]
+        loader: 'pug-loader'
+
       },
       {
-        test: /\.scss$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options:{},
-          },
-          {
-            loader:"css-loader",
-            options:{},
-          },
-          {
-            loader:"sass-loader",
-            options:{},
-          },
-        ],
-      },
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader',
+				],
+			}
     ],
   },  
   plugins: [
     new HtmlWebpackPlugin({
-      template:'./src/index.pug',
-      filename: 'output.html',
-      minify: false,
-      inject:true
-    }),
-    new HtmlWebpackPugPlugin({
-      adjustIndent: true
+      template: '!!pug-loader!./src/index.pug',
     }),
     new MiniCssExtractPlugin({
-      filename:'style.scss',
+      filename:'[name].min.css',
     }),
   ],
 };
