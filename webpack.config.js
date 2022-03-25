@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { type } = require('os');
 const path = require('path');
 
 module.exports = {
@@ -14,16 +15,30 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: 'pug-loader'
-
       },
       {
 				test: /\.(sa|sc|c)ss$/,
 				use: [
-					'style-loader',
+					{loader: MiniCssExtractPlugin.loader},
 					'css-loader',
 					'sass-loader',
 				],
-			}
+			},
+      {
+        test:/\.(|svg|jpg|jpeg|png|gif)$/i,
+        type:'asset/resource',
+        generator:{
+          filename:'assets/img/[name]_[hash][ext]',
+        },
+      },      
+      {
+        test:/fonts.*\.ttf$/i,
+        type:'asset/resource',
+        generator:{
+          filename:'assets/fonts/[name]_[hash][ext]',
+        },
+      },
+
     ],
   },  
   plugins: [
