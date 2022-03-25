@@ -1,5 +1,7 @@
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { type } = require('os');
 const path = require('path');
 
 module.exports = {
@@ -21,12 +23,31 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        use: [
-          {
-            loader: 'simple-pug-loader'
-          }
-        ]
+        loader: 'pug-loader'
       },
+      {
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					{loader: MiniCssExtractPlugin.loader},
+					'css-loader',
+					'sass-loader',
+				],
+			},
+      {
+        test:/\.(|svg|jpg|jpeg|png|gif)$/i,
+        type:'asset/resource',
+        generator:{
+          filename:'assets/img/[name]_[hash][ext]',
+        },
+      },      
+      {
+        test:/fonts.*\.ttf$/i,
+        type:'asset/resource',
+        generator:{
+          filename:'assets/fonts/[name]_[hash][ext]',
+        },
+      },
+
     ],
   },  
   plugins: [

@@ -1,2 +1,1 @@
-
-console.log("!!!!!")
+import './style.scss'
