@@ -1,0 +1,12 @@
+include ./color/color.pug
+
+mixin colorType
+  style
+    include colorType.scss
+  .container
+    container__logo
+      img(src=require("./assets/img/logo.png"), alt="logo")
+    .container__colors
+      +color
+    .contaier__titles
+      h1 все
