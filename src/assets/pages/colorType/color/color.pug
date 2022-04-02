@@ -1,18 +1,10 @@
 
-mixin color( opacity, color='#1F2041')
+mixin color(opacity="", title='Dark Shade', hex='#1F2041', color='$darkshade')
+
   style
     include color.scss
   .color-type__color
-    case opacity
-      when 'Purple'
-        p.color-type__color__square-purple.color-type__color__square
-        p.color-type__color__text__title #{opacity}
-        p.color-type__color__text__subtitle #{color}
-      when 'Green'
-        p.color-type__color__square-green.color-type__color__square
-        p.color-type__color__text__title #{opacity}
-        p.color-type__color__text__subtitle #{color}
-      default
-        p.color-type__color__square(style='opacity:'+opacity)
-        p.color-type__color__text__title Dark shade #{opacity}
-        p.color-type__color__text__subtitle #{color}
+    p.color-type__color__square(style={opacity:opacity, background:hex})
+    p.color-type__color__text__title #{opacity} #{title}
+    p.color-type__color__text__subtitle #{hex}
+
