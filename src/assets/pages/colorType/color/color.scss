@@ -1,22 +1,29 @@
-*{
-    color: #1F2041;
-}
+$darkshade:#1F2041;
+$purple:#BC9CFF;
+$green:#6FCF97;
 
-
-.container__square{
+.color-type__color__square{
     width: 70px;
     height: 70px;
-    background-color: #1F2041;
-    opacity: 100%;
     border-radius: 6px;
     margin-right: 20px;
+    background-color: $darkshade;
 }
 
-.container__text{
+.color-type__color__square-purple{
+    background-color: $purple;
+}
+
+.color-type__color__square-green{
+    background-color: $green;
+}
+
+.color-type__color__text{
     padding-left: 20px;
+    color: $darkshade;
 }
 
-.container__text__title{
+.color-type__color__text__title{
     font-family: 'Montserrat-Bold', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -25,7 +32,7 @@
 
 }
 
-.container__text__subtitle{
+.color-type__color__text__subtitle{
     font-family: 'Montserrat-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
