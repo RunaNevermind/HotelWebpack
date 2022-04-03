@@ -1,22 +1,13 @@
 $darkshade:#1F2041;
-$purple:#BC9CFF;
-$green:#6FCF97;
 
 .color-type__color__square{
     width: 70px;
     height: 70px;
     border-radius: 6px;
     margin-right: 20px;
-    background-color: $darkshade;
+    background: $darkshade;
 }
 
-.color-type__color__square-purple{
-    background-color: $purple;
-}
-
-.color-type__color__square-green{
-    background-color: $green;
-}
 
 .color-type__color__text{
     padding-left: 20px;
