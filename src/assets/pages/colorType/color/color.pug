@@ -1,8 +1,8 @@
 
-mixin color( opacity="1", color='Dark shade', hex='#1F2041')
+mixin color(opacity="", title='Dark Shade', hex='#1F2041')
   style
     include color.scss
   .color-type__color
-    p.color-type__color__square(style={'background':hex, 'opacity':opacity})
-    p.color-type__color__text__title #{color} #{opacity}
+    p.color-type__color__square(style={opacity:opacity, background:hex})
+    p.color-type__color__text__title #{opacity} #{title}
     p.color-type__color__text__subtitle #{hex}
