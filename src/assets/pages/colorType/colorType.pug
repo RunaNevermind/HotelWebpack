@@ -4,10 +4,10 @@ mixin colorType
   head
     style
       include colorType.scss
+  .logo
+    img(src=require("./assets/img/logo.png"), alt="logo")      
   .color-type
-    .color-type__logo
-      img(src=require("./assets/img/logo.png"), alt="logo")
-    .color-type__colors
+    .color-type__op
       +color('100%')
       +color('75%')
       +color('50%')
@@ -16,4 +16,25 @@ mixin colorType
       +color('','Purple', '#BC9CFF')
       +color('','Green', '#6FCF97')
     .color-type__text
-      h1 все
+      .color-type__text__h1
+        .color-type__text__h1__semitransparent.color-type__semitransparent H1
+        .color-type__text__h1__title
+          |This one is the sub-section or 
+          br
+          |widget title
+      .color-type__text__h2
+        .color-type__text__h2_semitransparent.color-type__semitransparent H2
+        .color-type__text__h2__subtitletitle
+          |Next one is the item title inside
+          br
+          |widgets
+      .color-type__text__h3 
+        .color-type__text__h3__semitransparent.color-type__semitransparent H3
+        .color-type__text__h3__subsubtitle This is a label or CTA text
+      .color-type__text__body
+        .color-type__text__body__semitransparent.color-type__semitransparent Body
+        .color-type__text__body__body
+          |This is the body text which is used for most
+          br
+          |of the design, like paragraphs, lists, etc.
+        

@@ -1,17 +1,19 @@
 $darkshade:#1F2041;
 
+.color-type__color{
+    display: flex;
+    margin-bottom: 20px;    
+}
 .color-type__color__square{
     width: 70px;
     height: 70px;
     border-radius: 6px;
-    margin-right: 20px;
-    background: $darkshade;
 }
 
 
 .color-type__color__text{
-    padding-left: 20px;
     color: $darkshade;
+    padding-left: 40px;
 }
 
 .color-type__color__text__title{
@@ -19,8 +21,7 @@ $darkshade:#1F2041;
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
-    line-height: 28px;
-
+    margin-top: 10px;    
 }
 
 .color-type__color__text__subtitle{
@@ -28,5 +29,5 @@ $darkshade:#1F2041;
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
-    line-height: 28px;
+    margin-top: 3px;
 }
