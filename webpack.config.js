@@ -1,4 +1,3 @@
-const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { type } = require('os');
@@ -8,15 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath:'/',
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 9000,
+    filename: '[name].bundle.js',
   },
   mode: 'development',
   module: {
@@ -24,6 +15,7 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: 'pug-loader'
+<<<<<<< HEAD
       },
       {
 				test: /\.(sa|sc|c)ss$/,
@@ -47,18 +39,40 @@ module.exports = {
           filename:'assets/fonts/[name]_[hash][ext]',
         },
       },
+=======
+      },
+      {
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					{loader: MiniCssExtractPlugin.loader},
+					'css-loader',
+					'sass-loader',
+				],
+			},
+      {
+        test:/\.(|svg|jpg|jpeg|png|gif)$/i,
+        type:'asset/resource',
+        generator:{
+          filename:'assets/img/[name]_[hash][ext]',
+        },
+      },      
+      {
+        test:/fonts.*\.(woff2|ttf)$/i,
+        type:'asset/resource',
+        generator:{
+          filename:'assets/fonts/[name]_[hash][ext]',
+        },
+      },
+>>>>>>> fix-bug-branch
 
     ],
   },  
   plugins: [
     new HtmlWebpackPlugin({
-      template:'./src/index.pug',
-      filename: 'output.html',
-      minify: false,
-      inject:true
+      template: '!!pug-loader!./src/index.pug',
     }),
-    new HtmlWebpackPugPlugin({
-      adjustIndent: true
+    new MiniCssExtractPlugin({
+      filename:'[name].min.css',
     }),
   ],
 };

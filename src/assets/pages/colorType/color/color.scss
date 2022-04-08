@@ -1,0 +1,33 @@
+$darkshade:#1F2041;
+
+.color-type__color{
+    display: flex;
+    margin-bottom: 20px;    
+}
+.color-type__color__square{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+
+.color-type__color__text{
+    color: $darkshade;
+    padding-left: 40px;
+}
+
+.color-type__color__text__title{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    margin-top: 10px;    
+}
+
+.color-type__color__text__subtitle{
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    margin-top: 3px;
+}

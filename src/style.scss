@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 @font-face {
     font-family: 'Montserrat-Bold';
     src: url('./assets/fonts/Montserrat-Bold.ttf');
+=======
+@import './assets/pages/colorType/colorType.scss';
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./assets/fonts/Montserrat-Bold.woff2');
+>>>>>>> fix-bug-branch
     font-weight: 700;
 };
 @font-face {
     font-family: 'Montserrat-Regular';
+<<<<<<< HEAD
     src: url('./assets/fonts/Montserrat-Regular.ttf');
     font-weight: 400;
 };
@@ -20,3 +29,8 @@ h2{
     font-family: 'Montserrat-Bold', sans-serif;
     color: $prumaru;
 };
+=======
+    src: url('./assets/fonts/Montserrat-Regular.woff2');
+    font-weight: 400;
+};
+>>>>>>> fix-bug-branch
