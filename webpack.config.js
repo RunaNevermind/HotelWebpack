@@ -15,31 +15,6 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: 'pug-loader'
-<<<<<<< HEAD
-      },
-      {
-				test: /\.(sa|sc|c)ss$/,
-				use: [
-					{loader: MiniCssExtractPlugin.loader},
-					'css-loader',
-					'sass-loader',
-				],
-			},
-      {
-        test:/\.(|svg|jpg|jpeg|png|gif)$/i,
-        type:'asset/resource',
-        generator:{
-          filename:'assets/img/[name]_[hash][ext]',
-        },
-      },      
-      {
-        test:/fonts.*\.ttf$/i,
-        type:'asset/resource',
-        generator:{
-          filename:'assets/fonts/[name]_[hash][ext]',
-        },
-      },
-=======
       },
       {
 				test: /\.(sa|sc|c)ss$/,
@@ -63,7 +38,6 @@ module.exports = {
           filename:'assets/fonts/[name]_[hash][ext]',
         },
       },
->>>>>>> fix-bug-branch
 
     ],
   },  
