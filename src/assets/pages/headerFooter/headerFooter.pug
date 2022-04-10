@@ -1,0 +1,9 @@
+include ./header/header.pug
+mixin headerFooter
+  head
+    style
+      include ./headerFooter.scss
+  .logo
+    img(src=require("./assets/img/logo.png"), alt="logo")
+  +header
+  

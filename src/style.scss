@@ -10,3 +10,31 @@
     src: url('./assets/fonts/Montserrat-Regular.woff2');
     font-weight: 400;
 };
+
+
+.title{
+    font-size: 24px;
+}
+
+.subtitle{
+    font-size: 19px;
+}
+
+.subsubtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .02rem;
+}
+
+.text{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    opacity:75%;
+    letter-spacing: 0.05rem;
+}

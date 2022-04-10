@@ -1,0 +1,17 @@
+mixin header
+  head
+    style
+      include ./header.scss
+  .header  
+    .colorLogo
+      img(src=require("./assets/img/colorLogo.png"), alt="logo")
+    .header__burger
+      a(href="http://")  О нас
+      a(href="http://")  Услуги
+      a(href="http://")  Вакансии
+      a(href="http://")  Новости
+      a(href="http://")  Соглашения
+    .header__registration
+      button войти
+      button зарегистрироваться
+
