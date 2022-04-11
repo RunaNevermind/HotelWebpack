@@ -1,17 +1,23 @@
-mixin header
+mixin header(name='', lastName='')
   head
     style
       include ./header.scss
-  .header  
+  .headerFooter__header  
     .colorLogo
       img(src=require("./assets/img/colorLogo.png"), alt="logo")
-    .header__burger
-      a(href="http://")  О нас
-      a(href="http://")  Услуги
-      a(href="http://")  Вакансии
-      a(href="http://")  Новости
-      a(href="http://")  Соглашения
-    .header__registration
-      button войти
-      button зарегистрироваться
+    .headerFooter__header__text
+      .headerFooter__header__text__burger
+        a.headerFooter__header__text__burger__a(href="http://")  О нас
+        a.headerFooter__header__text.headerFooter__header__text__burger__a(href="http//") Услуги
+          a(class=' _icon-extend-more' href="http://")
+        a.headerFooter__header__text__burger__a(href="http://")  Вакансии
+        a.headerFooter__header__text__burger__a(href="http://")  Новости
+        a.headerFooter__header__text.headerFooter__header__text__burger__a(href="http://") Соглашения
+        .headerFooter__header__registration
+          if name, lastName
+            .headerFooter__header__registration__name #{name}#{lastName}
+          else
+            .headerFooter__header__registration
+              button.headerFooter__header__registration__button(href="http://") войти
+              button.headerFooter__header__registration__button(href="http://") зарегистрироваться
 

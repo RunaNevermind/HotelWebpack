@@ -32,7 +32,7 @@ module.exports = {
         },
       },      
       {
-        test:/fonts.*\.(woff2|ttf)$/i,
+        test:/fonts.*\.(woff|woff2|ttf)$/i,
         type:'asset/resource',
         generator:{
           filename:'assets/fonts/[name]_[hash][ext]',
