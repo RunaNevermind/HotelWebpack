@@ -1,0 +1,93 @@
+$darkshade:#1F2041;
+$purple:#BC9CFF;
+$green:#6FCF97;
+$primary:#BC9CFF;
+$gradient:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+
+._icon-arrow:before{
+    text-decoration: none;
+    color: $purple;
+    cursor: pointer;
+    transform: rotate(80deg);
+}
+
+.text{
+    text-decoration: none;
+    opacity: 50%;
+}
+
+.headerFooter__footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 140px;
+    padding-left: 140px;
+    padding-right: 160px;
+}
+
+.headerFooter__footer__logo{
+    margin-top: 10px;
+    margin-bottom: 120px;
+}
+
+.headerFooter__footer__logo__text{
+    color: $darkshade;
+    opacity: 75%;
+}
+
+.headerFooter__footer__nav{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3em;
+    padding-right: 38px;
+    .text{
+        line-height: 35px;
+    }
+}
+
+.input.headerFooter__footer__subscription__email{
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex; 
+}
+
+.headerFooter__footer__subscription__text{
+    font-family: 'Montserrar-Regular', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: $darkshade;
+    opacity: 75%;
+}
+
+.headerFooter__footer__subscription__email__input{
+    background: url("./assets/img/arrow_forward.png") 0 40% no-repeat;
+    border: none;
+}
+
+.headerFooter__copyright{
+    background-color: #fff;    
+    display: flex;
+    justify-content: space-between;
+    color: $purple;
+    padding-top: 20px;
+    padding-left: 140px;
+    padding-right: 140px;
+    border-top: rgba(31, 32, 65, 0.05) solid 1px;
+}
+
+.headerFooter__copyright__text{
+    letter-spacing: 0em;
+    font-size: 14px;    
+}
+
+.headerFooter__copyright__cite{
+    display: flex;
+    color: $purple;
+}
+._icon-twitter,._icon-facebook,._icon-instagram{
+    font-size: 24px;
+    padding-left: 20px;
+}

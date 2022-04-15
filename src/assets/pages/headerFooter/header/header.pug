@@ -7,17 +7,18 @@ mixin header(name='', lastName='')
       img(src=require("./assets/img/colorLogo.png"), alt="logo")
     .headerFooter__header__text
       .headerFooter__header__text__burger
-        a.headerFooter__header__text__burger__a(href="http://")  О нас
-        a.headerFooter__header__text.headerFooter__header__text__burger__a(href="http//") Услуги
-          a(class=' _icon-extend-more' href="http://")
-        a.headerFooter__header__text__burger__a(href="http://")  Вакансии
-        a.headerFooter__header__text__burger__a(href="http://")  Новости
-        a.headerFooter__header__text.headerFooter__header__text__burger__a(href="http://") Соглашения
+        a.headerFooter__header__text__burger__a.text(href="http://")  О нас
+        a.headerFooter__header__text.headerFooter__header__text__burger__a.text(href="http//") Услуги
+          a(class='_icon-extend-more' href="http://")
+        a.headerFooter__header__text__burger__a.text(href="http://")  Вакансии
+        a.headerFooter__header__text__burger__a.text(href="http://")  Новости
+        a.headerFooter__header__text.headerFooter__header__text__burger__a.text(href="http://") Соглашения
+          a(class='_icon-extend-more' href="http://")
         .headerFooter__header__registration
           if name, lastName
-            .headerFooter__header__registration__name #{name}#{lastName}
+            .headerFooter__header__registration__name.text #{name}#{lastName}
           else
             .headerFooter__header__registration
-              button.headerFooter__header__registration__button(href="http://") войти
-              button.headerFooter__header__registration__button(href="http://") зарегистрироваться
+              button.headerFooter__header__registration__button.subsubtitle(href="http://") войти
+              button.headerFooter__header__registration__button.subsubtitle(href="http://") зарегистрироваться
 
