@@ -79,9 +79,6 @@ $green:#6FCF97;
 ._icon-arrow:before {
   content: "\e900";
 }
-._icon-extend-more:after {
-  content: "\e901";
-}
 ._icon-check-mark:before {
   content: "\e902";
 }
@@ -104,11 +101,26 @@ $green:#6FCF97;
   content: "\e908";
 }
 ._icon-twitter:before {
+  cursor: pointer;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+  background-image: $gradient;
   content: "\e909";
 }
 ._icon-facebook:before {
+  cursor: pointer;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+  background-image: $gradient;
   content: "\e90a";
 }
 ._icon-instagram:before {
+  cursor: pointer;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+  background-image: $gradient;
   content: "\e90b";
 }

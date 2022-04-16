@@ -1,0 +1,23 @@
+$darkshade:#1F2041;
+$purple:#BC9CFF;
+$green:#6FCF97;
+$gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+
+.headerFooter__copyright{
+    background-color: #ffffff;
+    margin-top: 150px;
+    padding-top: 17px;
+    text-align: center;
+}
+
+.headerFooter__copyright__text{
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    margin-top: 12px;
+}
+
+.headerFooter__copyright__text__cite{
+    padding-top: 23px;
+    font-size: 24px;
+}

@@ -1,13 +1,15 @@
 include ./header/header.pug
 include ./footer/footer.pug
+include ./copyright/copyright.pug
 mixin headerFooter
   head
     style
       include ./headerFooter.scss
   .headerFooter
     .logo
-      img(src=require("./assets/img/logo.png"), alt="logo")
+      img(src=require("./assets/img/logo.png"), alt="Toxin")
     +header
     +header('Юлий','Цезарь')
     +footer
+    +copyright
   

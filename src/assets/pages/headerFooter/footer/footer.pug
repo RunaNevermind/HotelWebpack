@@ -5,7 +5,7 @@ mixin footer
   .headerFooter__footer
     .headerFooter__footer__logo
       .colorLogo
-        img(src=require("./assets/img/colorLogo.png"), alt="logo")
+        img(src=require("./assets/img/colorLogo.png"), alt="Toxin")
         p.text.headerFooter__footer__logo__text
           |Бронирование номеров в лучшем
           br
@@ -38,9 +38,9 @@ mixin footer
       .input.headerFooter__footer__subscription__email
         input.headerFooter__footer__subscription__email__input(type='email', placeholder='Email')
         ._icon-arrow(href="http://") 
-  .headerFooter__copyright
-    .headerFooter__copyright__text.text Copyright © 2018 Toxin отель. Все права защищены.
-    .headerFooter__copyright__cite
-      ._icon-twitter
-      ._icon-facebook
-      ._icon-instagram
+  .headerFooter__footer__copyright
+    .headerFooter__footer__copyright__text.text Copyright © 2018 Toxin отель. Все права защищены.
+    .headerFooter__footer__copyright__cite
+      a.headerFooter__footer__copyright__cite__twitter._icon-twitter
+      a.headerFooter__footer__copyright__cite__facebook._icon-facebook
+      a.headerFooter__footer__copyright__cite__instagram._icon-instagram

@@ -4,7 +4,7 @@ mixin header(name='', lastName='')
       include ./header.scss
   .headerFooter__header  
     .colorLogo
-      img(src=require("./assets/img/colorLogo.png"), alt="logo")
+      img(src=require("./assets/img/colorLogo.png"), alt="Toxin")
     .headerFooter__header__text
       .headerFooter__header__text__burger
         a.headerFooter__header__text__burger__a.text(href="http://")  О нас
@@ -16,7 +16,7 @@ mixin header(name='', lastName='')
           a(class='_icon-extend-more' href="http://")
         .headerFooter__header__registration
           if name, lastName
-            .headerFooter__header__registration__name.text #{name}#{lastName}
+            .headerFooter__header__registration__name.text #{name} #{lastName}
           else
             .headerFooter__header__registration
               button.headerFooter__header__registration__button.subsubtitle(href="http://") войти
