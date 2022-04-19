@@ -25,7 +25,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
 }
 
 
-.headerFooter__header{
+.header-footer__header{
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -33,17 +33,17 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     padding: 18px 135px 11px 140px;
 }
 
-.headerFooter__header__text{
+.header-footer__header__text{
     font-family: "Montserrat-Regular", sans-serif;
     font-size: 14px;
     display: flex;
 }
 
-.headerFooter__header__text__burger{
+.header-footer__header__text__burger{
     display: flex;
 }
 
-.headerFooter__header__text__burger__a{
+.header-footer__header__text__burger__a{
     font-family: 'Montserrat-Regular', sans-serif;
     color: $darkshade;
     opacity: 50%;
@@ -52,24 +52,24 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     padding-left: 17px;
 }
 
-.headerFooter__header__text__burger__a:hover{
+.header-footer__header__text__burger__a:hover{
     color: $darkshade;
     font-family: 'Montserrat-Bold', sans-serif;
     font-weight: 400;
     opacity: 75%;
 }
 
-.headerFooter__header__text__burger__a:visited{
+.header-footer__header__text__burger__a:visited{
     color: $darkshade;
     opacity: 50%;
     text-decoration: none;
 }
 
-.headerFooter__header__registration{
+.header-footer__header__registration{
     margin-left: 4px;
 }
 
-.headerFooter__header__registration__button{
+.header-footer__header__registration__button{
     color: #ffffff;
     background: $gradient;
     border-radius: 22px;
@@ -80,7 +80,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     cursor: pointer;
 }
 
-.headerFooter__header__registration__button:hover{
+.header-footer__header__registration__button:hover{
     background: #ffffff;
     color: $primary;
     border-color: $gradient;

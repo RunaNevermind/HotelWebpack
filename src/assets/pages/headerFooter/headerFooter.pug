@@ -1,11 +1,11 @@
 include ./header/header.pug
 include ./footer/footer.pug
 include ./copyright/copyright.pug
-mixin headerFooter
+mixin header-footer
   head
     style
       include ./headerFooter.scss
-  .headerFooter
+  .header-footer
     .logo
       img(src=require("./assets/img/logo.png"), alt="Toxin")
     +header

@@ -17,7 +17,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     opacity: 50%;
 }
 
-.headerFooter__footer{
+.header-footer__footer{
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -29,17 +29,17 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
 
 }
 
-.headerFooter__footer__logo{
+.header-footer__footer__logo{
     margin-top: 10px;
     margin-bottom: 120px;
 }
 
-.headerFooter__footer__logo__text{
+.header-footer__footer__logo__text{
     color: $darkshade;
     opacity: 75%;
 }
 
-.headerFooter__footer__nav{
+.header-footer__footer__nav{
     display: flex;
     flex-direction: column;
     line-height: 1.3em;
@@ -49,7 +49,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     }
 }
 
-.input.headerFooter__footer__subscription__email{
+.input.header-footer__footer__subscription__email{
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
@@ -57,7 +57,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     display: flex; 
 }
 
-.headerFooter__footer__subscription__text{
+.header-footer__footer__subscription__text{
     font-family: 'Montserrar-Regular', sans-serif;
     font-size: 14px;
     text-decoration: none;
@@ -65,12 +65,12 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     opacity: 75%;
 }
 
-.headerFooter__footer__subscription__email__input{
+.header-footer__footer__subscription__email__input{
     background: url("./assets/img/arrow_forward.png") 0 40% no-repeat;
     border: none;
 }
 
-.headerFooter__footer__copyright{
+.header-footer__footer__copyright{
     background-color: #fff;    
     display: flex;
     justify-content: space-between;
@@ -82,12 +82,12 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     padding-bottom: 20px;
 }
 
-.headerFooter__footer__copyright__text{
+.header-footer__footer__copyright__text{
     letter-spacing: 0em;
     font-size: 14px;    
 }
 
-.headerFooter__footer__copyright__cite{
+.header-footer__footer__copyright__cite{
     display: flex;
 
 }

@@ -2,23 +2,23 @@ mixin header(name='', lastName='')
   head
     style
       include ./header.scss
-  .headerFooter__header  
+  .header-footer__header  
     .colorLogo
       img(src=require("./assets/img/colorLogo.png"), alt="Toxin")
-    .headerFooter__header__text
-      .headerFooter__header__text__burger
-        a.headerFooter__header__text__burger__a.text(href="http://")  О нас
-        a.headerFooter__header__text__burger__a.text(href="http//") Услуги
+    .header-footer__header__text
+      .header-footer__header__text__burger
+        a.header-footer__header__text__burger__a.text(href="http://")  О нас
+        a.header-footer__header__text__burger__a.text(href="http//") Услуги
           a(class='_icon-extend-more' href="http://")
-        a.headerFooter__header__text__burger__a.text(href="http://")  Вакансии
-        a.headerFooter__header__text__burger__a.text(href="http://")  Новости
-        a.headerFooter__header__text__burger__a.text(href="http://") Соглашения
+        a.header-footer__header__text__burger__a.text(href="http://")  Вакансии
+        a.header-footer__header__text__burger__a.text(href="http://")  Новости
+        a.header-footer__header__text__burger__a.text(href="http://") Соглашения
           a(class='_icon-extend-more' href="http://")
-        .headerFooter__header__registration
+        .header-footer__header__registration
           if name, lastName
-            .headerFooter__header__registration__name.text #{name} #{lastName}
+            .header-footer__header__registration__name.text #{name} #{lastName}
           else
-            .headerFooter__header__registration
-              button.headerFooter__header__registration__button.subsubtitle(href="http://") войти
-              button.headerFooter__header__registration__button.subsubtitle(href="http://") зарегистрироваться
+            .header-footer__header__registration
+              button.header-footer__header__registration__button.subsubtitle(href="http://") войти
+              button.header-footer__header__registration__button.subsubtitle(href="http://") зарегистрироваться
 
