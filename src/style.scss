@@ -11,10 +11,13 @@
     font-weight: 400;
 };
 
-
-$darkshade:#1F2041;
 $purple:#BC9CFF;
 $green:#6FCF97;
+$darkshade:#1F2041;
+$darkshade75:#1f2041bf;
+$darkshadev:#1f204180;
+$darkshade25:#1f204140;
+
 
 .title{
   font-family: 'Montserrat-Bold', sans-serif;
@@ -53,6 +56,9 @@ $green:#6FCF97;
   color: $darkshade;
 }
 
+.semitransparent{
+  opacity:25%;
+}
 
 @font-face {
   font-family: 'icon-font';

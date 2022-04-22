@@ -1,0 +1,29 @@
+include ./input/input.pug
+include ./dropdown-quest/dropdown-quest.pug
+mixin form-element
+  style
+    include ./form-element.scss
+  .form-element
+    .logo
+      img(src=require("./assets/img/logo.png"), alt="Toxin")
+    .form-element__first-part
+      .form-element__first-part__input
+        .form-element__first-part__input__default
+          .form-element__first-part__input__default__text
+            .subsubtitle Text Field 
+            .subsubtitle.semitransparent Default
+          +input('email')
+        .form-element__first-part__input__hover
+          +input('text')
+        .form-element__first-part__input__defailt
+          +dropdown-quest
+        .form-element__first-part__input__subscription
+          +input('date')
+      .form-element__first-part__checboxbuttons
+      .form-element__first-part__buttons
+    .form-element__second-part
+      .form-element__second-part__dropdown
+      .form-element__second-part__checkboxlist
+    .form-element__end
+      .form-element__end__advantage
+      .form-elemnt__end__comment
