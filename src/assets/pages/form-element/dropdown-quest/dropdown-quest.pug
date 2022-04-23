@@ -1,30 +1,32 @@
+
 mixin dropdown-quest
   style
     include ./dropdown-quest.scss
   .dropdown
     .dropdown__text.text
-      .dropdown__text__title Сколько гостей
+      #allQuest.dropdown__text__title #{allQuest='Сколько гостей'}
       ._icon-extend-more
     .dropdown__menu.subsubtitle
       .dropdown__menu__value
         p Взрослые
         .dropdown__menu__value__button
-          button#decrement-adult.dropdown__menu__value__button__add -
-          #adult.dropdown__menu__value__button__all 0
-          button#increment-adult.dropdown__menu__value__button__deduct +
+          button#decrement-adult.dropdown__menu__value__button__deduct -
+          #adult.dropdown__menu__value__button__all #{adult=0}
+          button#increment-adult.dropdown__menu__value__button__add +
       .dropdown__menu__value
         p Дети
         .dropdown__menu__value__button
-          button#decrement-child.dropdown__menu__value__button__add -
-          #child.dropdown__menu__value__button__all 0
-          button#increment-child.dropdown__menu__value__button__deduct +
+          button#decrement-child.dropdown__menu__value__button__deduct -
+          #child.dropdown__menu__value__button__all #{child=0}
+          button#increment-child.dropdown__menu__value__button__add +
       .dropdown__menu__value
         p Младенцы
         .dropdown__menu__value__button
-          button#decrement-infant.dropdown__menu__value__button__add -
-          #infant.dropdown__menu__value__button__all 0
-          button#increment-infant.dropdown__menu__value__button__deduct +
+          button#decrement-infant.dropdown__menu__value__button__deduct -
+          #infant.dropdown__menu__value__button__all #{infant=0}
+          button#increment-infant.dropdown__menu__value__button__add +
       .dropdown__menu__button
-        a(href="http://").dropdown__menu__button__clear Очистить
-        a(href="http://").dropdown__menu__button__apply Применить
-  script(src='./dropdown-quest.js')
+        button#button-clear.subsubtitle.dropdown__menu__button__clear Очистить
+        a#button-accept(href="http://").dropdown__menu__button__apply Применить
+  script
+    include dropdown-quest.js
