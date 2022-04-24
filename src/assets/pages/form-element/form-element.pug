@@ -8,19 +8,22 @@ mixin form-element
       img(src=require("./assets/img/logo.png"), alt="Toxin")
     .form-element__first-part
       .form-element__first-part__input
-        .form-element__first-part__input__default
-          .form-element__first-part__input__default__text
-            .subsubtitle Text Field 
-            .subsubtitle.semitransparent Default
-          +input('email')
+        .form-element__first-part__input__text
+          .form-element__first-part__input__text__title.subsubtitle Text Field 
+          .form-element__first-part__input__text__semitransparent.text.semitransparent Default
+        +input('email')
         .form-element__first-part__input__hover
-          +input('text')
-        .form-element__first-part__input__defailt
-          +dropdown-quest
-        .form-element__first-part__input__subscription
-          +input('date')
-      .form-element__first-part__checboxbuttons
-      .form-element__first-part__buttons
+          .form-element__first-part__input__text__title.subsubtitle Text Field 
+          .form-element__first-part__input__text__semitransparent.text.semitransparent Hover/Focus
+        +input('text')
+      .form-element__first-part__input__defailt
+        .form-element__first-part__input__defailt__dropdown.subsubtitle Dropdown
+        +dropdown-quest
+      .form-element__first-part__input__subscription
+        .form-element__first-part__input__subscription__text.subsubtitle masked text field
+        +input('date')
+    .form-element__first-part__checboxbuttons
+    .form-element__first-part__buttons
     .form-element__second-part
       .form-element__second-part__dropdown
       .form-element__second-part__checkboxlist

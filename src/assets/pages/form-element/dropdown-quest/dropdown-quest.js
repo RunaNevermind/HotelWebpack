@@ -19,7 +19,7 @@ var div = document.getElementById('button-clear');
 incAdult.addEventListener('click', function(){
     adult++
     allQuest++
-    document.querySelector('#allQuest').innerHTML = allQuest + ' гостя'
+    check();
     document.querySelector('#adult').innerHTML = adult
     div.style.visibility='visible';
 })
@@ -38,16 +38,18 @@ decAdult.addEventListener('click', function(){
 incChild.addEventListener('click', function(){
     allQuest++
     child++
-    document.querySelector('#allQuest').innerHTML = allQuest + ' гостя'
-    document.querySelector('#child').innerHTML = child
+    check();
+    document.querySelector('#allQuest').innerHTML = allQuest + ' гостя';
+    document.querySelector('#child').innerHTML = child;
+    div.style.visibility='visible';
 })
 
 decChild.addEventListener('click', function(){
     if(child > 0){
         child--
         allQuest--
-        document.querySelector('#allQuest').innerHTML = allQuest + ' гостя'
-        document.querySelector('#child').innerHTML = child
+        document.querySelector('#allQuest').innerHTML = allQuest + ' гостя';
+        document.querySelector('#child').innerHTML = child;
     }
     else
         return 0
@@ -55,9 +57,13 @@ decChild.addEventListener('click', function(){
 
 incInfant.addEventListener('click', function(){
     infant++
-    allQuest++
-    document.querySelector('#allQuest').innerHTML = allQuest + ' гостя'
+    if(infant==1){
+        document.querySelector('#allQuest').innerHTML = allQuest + ' гостя, ' + infant + ' младенец';
+    }
+    else
+        document.querySelector('#allQuest').innerHTML = allQuest + ' гостя, ' + infant + ' младенцев';
     document.querySelector('#infant').innerHTML = infant
+    div.style.visibility='visible';
 })
 
 decInfant.addEventListener('click', function(){
@@ -70,6 +76,14 @@ decInfant.addEventListener('click', function(){
     else
         return 0
 })
+
+function check(){
+    if(allQuest==1){
+        document.querySelector('#allQuest').innerHTML = allQuest + ' гость'
+    }
+    else
+        document.querySelector('#allQuest').innerHTML = allQuest + ' гостей'
+}
 
 clear.addEventListener('click', function(){
     adult= 0;
