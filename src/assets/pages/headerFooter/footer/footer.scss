@@ -47,6 +47,9 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     .text{
         line-height: 35px;
     }
+    .header-footer__footer__nav__link{
+        color: $darkshade;
+    }
 }
 
 .input.header-footer__footer__subscription__email{
@@ -66,7 +69,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
 }
 
 .header-footer__footer__subscription__email__input{
-    background: url("./assets/img/arrow_forward.png") 0 40% no-repeat;
+
     border: none;
 }
 

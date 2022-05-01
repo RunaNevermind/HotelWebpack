@@ -1,4 +1,3 @@
-@import './assets/pages/pages.scss';
 
 @font-face {
     font-family: 'Montserrat-Bold';
@@ -14,9 +13,7 @@
 $purple:#BC9CFF;
 $green:#6FCF97;
 $darkshade:#1F2041;
-$darkshade75:#1f2041bf;
-$darkshadev:#1f204180;
-$darkshade25:#1f204140;
+$gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
 
 
 .title{

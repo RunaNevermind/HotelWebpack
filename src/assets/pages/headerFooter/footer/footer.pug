@@ -1,7 +1,4 @@
 mixin footer
-  head
-    style
-      include ./footer.scss
   .header-footer__footer
     .header-footer__footer__logo
       .colorLogo
@@ -14,21 +11,21 @@ mixin footer
           |ассоциации «Отельные взгляды»
     .header-footer__footer__nav
       p.subsubtitle Навигация
-      a.text(href='http://') О нас
-      a.text(href='http://') Новости
-      a.text(href='http://') Служба поддержки
-      a.text(href='http://') Услуги
+      a.text.header-footer__footer__nav__link(href='http://') О нас
+      a.text.header-footer__footer__nav__link(href='http://') Новости
+      a.text.header-footer__footer__nav__link(href='http://') Служба поддержки
+      a.text.header-footer__footer__nav__link(href='http://') Услуги
     .header-footer__footer__nav
       p.subsubtitle О нас
-      a.text(href='http://') О сервисе
-      a.text(href='http://') Наша команда
-      a.text(href='http://') Вакансии
-      a.text(href='http://') Инвесторы
+      a.text.header-footer__footer__nav__link(href='http://') О сервисе
+      a.text.header-footer__footer__nav__link(href='http://') Наша команда
+      a.text.header-footer__footer__nav__link(href='http://') Вакансии
+      a.text.header-footer__footer__nav__link(href='http://') Инвесторы
     .header-footer__footer__nav
       p.subsubtitle Служба поддержки
-      a.text(href='http://') Соглашения
-      a.text(href='http://') Сообщества
-      a.text(href='http://') Связь с нами
+      a.text.header-footer__footer__nav__link(href='http://') Соглашения
+      a.text.header-footer__footer__nav__link(href='http://') Сообщества
+      a.text.header-footer__footer__nav__link(href='http://') Связь с нами
     .header-footer__footer__subscription
       p.subsubtitle Подписка
       p.text.header-footer__footer__subscription__text

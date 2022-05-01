@@ -1,9 +1,6 @@
 include ./color/color.pug
 
 mixin color-type
-  head
-    style
-      include colorType.scss
   .logo
     img(src=require("./assets/img/logo.png"), alt="logo")      
   .color-type
@@ -37,4 +34,3 @@ mixin color-type
           |This is the body text which is used for most
           br
           |of the design, like paragraphs, lists, etc.
-        
