@@ -1,1 +1,104 @@
-@import './air-datepicker/air-datepicker.css';
+$purple:#BC9CFF;
+$green:#6FCF97;
+$darkshade:#1F2041;
+$gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+$green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$darkshade-light:#1f204180;
+
+.air-datepicker-nav--title{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 19px;
+    color: $darkshade;
+}
+
+.air-datepicker-nav--title i{
+    color: $darkshade;
+}
+
+.air-datepicker-body--day-name{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 12px;
+    color: $purple;
+}
+
+.air-datepicker-cell{
+    font-family: 'Montserrat-Regular', sans-serif;
+    color: $darkshade-light;
+    
+}
+
+.air-datepicker-cell.-range-to-{
+    font-family: 'Montserrat-Bold', sans-serif;
+    background: $gradient;
+    border-radius: 50%;
+    opacity: 1;
+    color: #ffffff;
+    border: none;
+}
+
+.air-datepicker-cell.-selected-.-current-{
+    background: $gradient;
+}
+
+.air-datepicker-cell.-current-.-focus-{
+    color: #ffffff;
+}
+
+.air-datepicker-cell.-range-from-{
+    font-family: 'Montserrat-Bold', sans-serif;
+    background-color: $gradient;
+    border-radius: 50%;
+    opacity: 1;
+    border:none;
+    color: #ffffff;
+}
+
+.air-datepicker-cell.-in-range-{
+    border: none;
+    background: $gradient;
+    opacity: 0.25;
+    color: $darkshade 1;
+}
+
+.air-datepicker-cell.-in-range-:hover{
+    background: $gradient;
+    opacity: 0.25;
+    color: $darkshade 1;
+}
+
+.air-datepicker-cell.-selected-{
+    background: $gradient;
+    border-radius: 50%;
+}
+
+.air-datepicker-cell.-selected-.-focus-{
+    opacity: 100%;
+    border-radius: 50%;
+    background: $gradient;
+}
+
+.air-datepicker-cell.-current-{
+    font-family: 'Montserrat-Bold', sans-serif;
+    color: #ffffff;
+    background: $green-gradient;
+    border-radius: 50%;
+}
+
+.-selected-.air-datepicker-cell.-day-.-other-month-{
+    background: $gradient;
+}
+
+.-in-range-.air-datepicker-cell.-day-.-other-month-{
+    color: $darkshade;
+}
+
+.air-datepicker-button{
+    color:$purple;
+    font-family: 'Montserrat-Bold', sans-serif;
+    line-height: 14.63px;
+
+}
+
+.air-datepicker--buttons{
+    border: none;
+}

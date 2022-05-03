@@ -29,5 +29,8 @@
   ],
   "author": "RunaNevermind",
   "license": "ISC",
-  "description": "Frontend компоненты в фирменном стиле toxin"
+  "description": "Frontend компоненты в фирменном стиле toxin",
+  "dependencies": {
+    "air-datepicker": "^3.1.1"
+  }
 }

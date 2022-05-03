@@ -13,27 +13,23 @@
 $purple:#BC9CFF;
 $green:#6FCF97;
 $darkshade:#1F2041;
+$darkshade-light:#1f204180;
 $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+$green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 
 .title{
   font-family: 'Montserrat-Bold', sans-serif;
-  font-style: normal;
-  font-weight: 700;
   font-size: 24px;
 }
 
 .subtitle{
   font-family: 'Montserrat-Bold', sans-serif;
-  font-style: normal;
-  font-weight: 700;
   font-size: 19px;
 }
 
 .subsubtitle{
   font-family: 'Montserrat-Bold', sans-serif;
-  font-style: normal;
-  font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -41,8 +37,6 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
 .text{
   font-size: 14px;
   font-family: 'Montserrat-Regular', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   line-height: 24px;
   opacity:75%;
   letter-spacing: 0.05rem;
