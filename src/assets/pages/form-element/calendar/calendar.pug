@@ -1,7 +1,12 @@
 mixin calendar
-  p !!!
-  input(type="text" id='air-datepicker')
-  script
-    include ./calendar.js
+  .calendar
+    .calendar-date
+      input(type="text" id='air-datepicker' class='text')
+      ._icon-extend-more
+    .calendar-date
+      input(type="text" id='end' class='text')
+      ._icon-extend-more
+    script
+      include ./calendar.js
       
 

@@ -5,6 +5,32 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
 $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $darkshade-light:#1f204180;
 
+._icon-extend-more:before{
+
+}
+
+.calendar{
+    display: flex;
+}
+
+.calendar-date{
+    display: flex;
+    border:1px solid $darkshade-light;
+    border-radius: 3px;
+    max-width: 150px;
+    height: 44px;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.calendar-date input{
+    border: none;
+    border-color:none;
+    max-width: 120px;
+}
+
 .air-datepicker-nav--title{
     font-family: 'Montserrat-Bold', sans-serif;
     font-size: 19px;
@@ -24,7 +50,7 @@ $darkshade-light:#1f204180;
 .air-datepicker-cell{
     font-family: 'Montserrat-Regular', sans-serif;
     color: $darkshade-light;
-    
+    border-color: $darkshade 25%;
 }
 
 .air-datepicker-cell.-range-to-{
@@ -101,4 +127,8 @@ $darkshade-light:#1f204180;
 
 .air-datepicker--buttons{
     border: none;
+}
+
+input:focus-visible{
+    outline: none;
 }
