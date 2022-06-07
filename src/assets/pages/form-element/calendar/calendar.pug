@@ -1,11 +1,15 @@
-mixin calendar
+mixin calendar(title1='',title2='')
   .calendar
     .calendar-date
-      input(type="text" id='air-datepicker' class='text')
-      ._icon-extend-more
+      .calendar__title.subsubtitle #{title1}
+      .calendar-date__input
+        input(type="text" id='air-datepicker' class='text')
+        .calendar-date__input__icon._icon-extend-more
     .calendar-date
-      input(type="text" id='end' class='text')
-      ._icon-extend-more
+      .calendar__title.subsubtitle #{title2}
+      .calendar-date__input
+        input(type="text" id='end' class='text')
+        .calendar-date__input__icon._icon-extend-more
     script
       include ./calendar.js
       

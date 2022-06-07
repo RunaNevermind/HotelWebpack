@@ -12,7 +12,7 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
     transform: rotate(180deg);
 }
 
-.text{
+.header-footer__text{
     text-decoration: none;
     opacity: 50%;
 }
@@ -69,7 +69,6 @@ $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%
 }
 
 .header-footer__footer__subscription__email__input{
-
     border: none;
 }
 

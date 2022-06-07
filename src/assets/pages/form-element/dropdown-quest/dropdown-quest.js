@@ -1,3 +1,4 @@
+import'./dropdown-quest.scss';
 let incAdult = document.getElementById('increment-adult');
 let decAdult = document.getElementById('decrement-adult');
 let adult = 0;
@@ -14,14 +15,15 @@ let clear = document.getElementById('button-clear');
 let accept = document.getElementById('button-accept')
 
 let allQuest = 0;
-var div = document.getElementById('button-clear');
+var buttonClear = document.getElementById('button-clear');
+
 
 incAdult.addEventListener('click', function(){
     adult++
     allQuest++
     check();
     document.querySelector('#adult').innerHTML = adult
-    div.style.visibility='visible';
+    buttonClear.style.visibility='visible';
 })
 
 decAdult.addEventListener('click', function(){
@@ -39,9 +41,8 @@ incChild.addEventListener('click', function(){
     allQuest++
     child++
     check();
-    document.querySelector('#allQuest').innerHTML = allQuest + ' гостя';
     document.querySelector('#child').innerHTML = child;
-    div.style.visibility='visible';
+    buttonClear.style.visibility='visible';
 })
 
 decChild.addEventListener('click', function(){
@@ -57,24 +58,23 @@ decChild.addEventListener('click', function(){
 
 incInfant.addEventListener('click', function(){
     infant++
-    if(infant==1){
-        document.querySelector('#allQuest').innerHTML = allQuest + ' гостя, ' + infant + ' младенец';
-    }
-    else
-        document.querySelector('#allQuest').innerHTML = allQuest + ' гостя, ' + infant + ' младенцев';
-    document.querySelector('#infant').innerHTML = infant
-    div.style.visibility='visible';
+    inf();
+    document.querySelector('#infant').innerHTML = infant;
+    buttonClear.style.visibility='visible';
 })
 
 decInfant.addEventListener('click', function(){
-    if(infant > 0){
+    if(infant == 1){
         infant--
-        allQuest--
-        document.querySelector('#allQuest').innerHTML = allQuest  + ' гостя'
-        document.querySelector('#infant').innerHTML = infant
+        document.querySelector('#infant').innerHTML = infant;        
+        inf();
     }
-    else
-        return 0
+    else{
+        inf()
+        return document.querySelector('#allQuest').innerHTML = allQuest + ' гостя';
+    }
+        
+
 })
 
 function check(){
@@ -83,6 +83,26 @@ function check(){
     }
     else
         document.querySelector('#allQuest').innerHTML = allQuest + ' гостей'
+}
+
+function inf(){
+    switch(infant){
+        case'1':{
+            document.querySelector('#infant').innerHTML = infant;            
+            document.querySelector('#allQuest').innerHTML = allQuest + ' гостя, ' + infant + ' младенец';
+            break;
+        };
+        case'0':{
+            document.querySelector('#infant').innerHTML = 0;
+            document.querySelector('#allQuest').innerHTML = allQuest + ' гостя';
+            break;
+        };
+        default:{
+            document.querySelector('#infant').innerHTML = infant;            
+            document.querySelector('#allQuest').innerHTML = allQuest + ' гостя, ' + infant + ' младенцев';
+            break;
+        }
+    };
 }
 
 clear.addEventListener('click', function(){
@@ -100,6 +120,6 @@ clear.addEventListener('click', function(){
 })
 
 accept.addEventListener('click', function(){
-    allQuest = adult + child + infant;
+    allQuest = adult + child;
     document.querySelector('#allQuest').innerHTML = allQuest + ' гостя';
 })

@@ -1,6 +1,7 @@
-include ./input/input.pug
 include ./dropdown-quest/dropdown-quest.pug
 include ./calendar/calendar.pug
+include ./input/input.pug
+include ./radio-button/radio-button.pug
 mixin form-element
   .form-element
     .logo
@@ -9,20 +10,38 @@ mixin form-element
       .form-element__first-part__input
         .form-element__first-part__input__text
           .form-element__first-part__input__text__title.subsubtitle Text Field 
-          .form-element__first-part__input__text__semitransparent.text.semitransparent Default
-        +input('email')
+          .form-element__first-part__input__text__semitransparent.text Default
+        +form-input("text", 'Email')
         .form-element__first-part__input__hover
-          .form-element__first-part__input__text__title.subsubtitle Text Field 
-          .form-element__first-part__input__text__semitransparent.text.semitransparent Hover/Focus
-        +input('text')
-      .form-element__first-part__input__defailt
-        .form-element__first-part__input__defailt__dropdown.subsubtitle Dropdown
-        +dropdown-quest
-      .form-element__first-part__input__subscription
-        .form-element__first-part__input__subscription__text.subsubtitle masked text field
-        +input('date')
-    .form-element__first-part__checboxbuttons
-    .form-element__first-part__buttons
+          .form-element__first-part__input__hover__title.subsubtitle Text Field 
+          .form-element__first-part__input__hover__semitransparent.text Hover/Focus
+        +form-input("text",'Email')
+        .form-element__first-part__input__defailt
+          .form-element__first-part__input__defailt__text.subsubtitle Dropdown
+          .form-element__first-part__input__defailt__dropdown
+            +dropdown-quest
+        .form-element__first-part__calendar
+          +calendar('Date dropdown','Date dropdown')
+        .form-element__first-part__input__subscription
+          .form-element__first-part__input__subscription__text.subsubtitle masked text field
+        .form-element__first-part__input__subscription__email
+          input.form-element__first-part__input__subscription__email__input.text(type='email', placeholder='Email')
+          ._icon-arrow(href="http://") 
+      .form-element__first-part__checkboxbuttons
+        .form-element__first-part__checkboxbuttons__title Checkbox buttons
+        .form-element__first-part__checboxbuttons__checkbox
+          +radio-button('Можно курить')
+          +radio-button('Можно с питомцами')
+          +radio-button('Можно пригласить гостей (до 10 человек)')
+        .form-element__first-part__checkboxbuttons__radio-buttons
+          .form-element__first-part__checkboxbuttons__radio-buttons__name Radio Buttons
+          .form-element__first-part__checkboxbuttons__radio-buttons__button
+            input.form-element__first-part__checkboxbuttons__radio-buttons__button__type(type="radio")
+            .form-element__first-part__checkboxbuttons__radio-buttons__button__type__button-name Мужчина
+          .form-element__first-part__checkboxbuttons__radio-buttons__button
+            input.form-element__first-part__checkboxbuttons__radio-buttons__button__type(type="radio")
+            .form-element__first-part__checkboxbuttons__radio-buttons__button__type__button-name Женщина
+      .form-element__first-part__buttons
     .form-element__second-part
       .form-element__second-part__dropdown
       .form-element__second-part__checkboxlist

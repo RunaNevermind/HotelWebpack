@@ -1,5 +1,2 @@
-mixin input(type='')
-  style
-    include ./input.scss
-  .input.text
-    input(type=type)
+mixin form-input (type='text', placeholder='')
+  input.text.form-element-input(type=type, placeholder=placeholder)

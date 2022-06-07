@@ -1,10 +1,8 @@
 
 mixin dropdown-quest
-  style
-    include ./dropdown-quest.scss
   .dropdown
     .dropdown__text.text
-      #allQuest.dropdown__text__title #{allQuest='Сколько гостей'}
+      #allQuest.dropdown__text__title #{allQuest='Сколько гостей'}#{infant}
       ._icon-extend-more
     .dropdown__menu.subsubtitle
       .dropdown__menu__value
@@ -28,5 +26,3 @@ mixin dropdown-quest
       .dropdown__menu__button
         button#button-clear.subsubtitle.dropdown__menu__button__clear Очистить
         a#button-accept(href="http://").dropdown__menu__button__apply Применить
-  script
-    include dropdown-quest.js

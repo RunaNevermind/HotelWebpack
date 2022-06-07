@@ -3,42 +3,51 @@ $green:#6FCF97;
 $darkshade:#1F2041;
 $gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
 $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-$darkshade-light:#1f204180;
+$darkshade-light:rgba(31, 32, 65, 0.25);
 
 ._icon-extend-more:before{
-
 }
 
 .calendar{
     display: flex;
 }
 
-.calendar-date{
-    display: flex;
-    border:1px solid $darkshade-light;
-    border-radius: 3px;
-    max-width: 150px;
-    height: 44px;
-    font-size: 14px;
-    padding-left: 15px;
-    padding-right: 10px;
+.calendar-date:first-child{
     margin-right: 20px;
 }
 
-.calendar-date input{
+.calendar-date__input{
+    display: flex;
+    border:1px solid $darkshade-light;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 157px;
+    height: 44px;
+    font-size: 14px;
+    margin-top: 10px;    
+}
+
+.calendar-date__input input{
     border: none;
     border-color:none;
+    width: 100%;
     max-width: 120px;
+    padding-left: 20px;
+}
+
+
+.air-datepicker-global-container{
+    min-width: 320px;
 }
 
 .air-datepicker-nav--title{
     font-family: 'Montserrat-Bold', sans-serif;
     font-size: 19px;
-    color: $darkshade;
+    color: #1F2041;
 }
 
 .air-datepicker-nav--title i{
-    color: $darkshade;
+    color: #1F2041;
 }
 
 .air-datepicker-body--day-name{
@@ -49,8 +58,8 @@ $darkshade-light:#1f204180;
 
 .air-datepicker-cell{
     font-family: 'Montserrat-Regular', sans-serif;
-    color: $darkshade-light;
-    border-color: $darkshade 25%;
+    color: #1f204180;
+    border-color: #1F2041 25%;
 }
 
 .air-datepicker-cell.-range-to-{
@@ -83,13 +92,13 @@ $darkshade-light:#1f204180;
     border: none;
     background: $gradient;
     opacity: 0.25;
-    color: $darkshade 1;
+    color: #1F2041 1;
 }
 
 .air-datepicker-cell.-in-range-:hover{
     background: $gradient;
     opacity: 0.25;
-    color: $darkshade 1;
+    color: #1F2041 1;
 }
 
 .air-datepicker-cell.-selected-{
@@ -115,7 +124,7 @@ $darkshade-light:#1f204180;
 }
 
 .-in-range-.air-datepicker-cell.-day-.-other-month-{
-    color: $darkshade;
+    color: #1F2041;
 }
 
 .air-datepicker-button{
