@@ -1,4 +1,7 @@
-mixin radio-button(name='')
+mixin radio-button(title='',name='')
   .radio-button
-    input.radio-button__button(type="checkbox")
-    .radio-button__name #{name}
+    label.radio-button__wrap
+      input(type="radio" class='radio-button__wrap__button' name=name)
+      span.radio-button__wrap__empty
+      span.radio-button__wrap__name.text #{title}
+  

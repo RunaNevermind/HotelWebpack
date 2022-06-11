@@ -1,0 +1,55 @@
+$purple:#BC9CFF;
+$green:#6FCF97;
+$darkshade:#1F2041;
+$darkshade-light:rgba(31, 32, 65, 0.25);
+$darkshade-half:rgba(31, 32, 65, 0.5);
+$darkshade-dark:rgba(31, 32, 65, 0.75);
+$gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+$green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+.checkbox{
+    display: flex;
+}
+
+.checkbox__label{
+    display: flex;
+}
+.checkbox__label__button{
+    display: none;
+}
+
+.checkbox__label__name{
+    user-select: none;    
+    color: $darkshade-half;
+    font-family: 'Montserrat-Regular', sans-serif;
+    letter-spacing: 0.02rem;
+    margin-left: 10px;
+}
+
+.checkbox__label__empty{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    color: $purple;
+    border: 1px solid $darkshade-light;
+    border-radius: 4px;
+}
+
+.checkbox__label__empty::before{
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    opacity: 0;
+    top: 2px;
+    left: 2px;
+}
+
+.checkbox__label__button:checked + .checkbox__label__empty::before{
+    opacity: 1;
+}
+
+.checkbox__label__button:checked + .checkbox__label__empty{
+    border: 1px solid $purple;     
+    border-radius: 4px;
+}
+

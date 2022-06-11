@@ -79,6 +79,12 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border: none;
 }
 
+
 .form-element__first-part__checkboxbuttons__radio-buttons__button{
     display: flex;
+}
+
+.form-element__first-part__checkboxbuttons__radio-buttons__radio-button{
+    display: flex;
+    
 }

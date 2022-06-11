@@ -1,6 +1,7 @@
 include ./dropdown-quest/dropdown-quest.pug
 include ./calendar/calendar.pug
 include ./input/input.pug
+include ./checkbox/checkbox.pug
 include ./radio-button/radio-button.pug
 mixin form-element
   .form-element
@@ -28,19 +29,16 @@ mixin form-element
           input.form-element__first-part__input__subscription__email__input.text(type='email', placeholder='Email')
           ._icon-arrow(href="http://") 
       .form-element__first-part__checkboxbuttons
-        .form-element__first-part__checkboxbuttons__title Checkbox buttons
+        .form-element__first-part__checkboxbuttons__title.subsubtitle Checkbox buttons
         .form-element__first-part__checboxbuttons__checkbox
-          +radio-button('Можно курить')
-          +radio-button('Можно с питомцами')
-          +radio-button('Можно пригласить гостей (до 10 человек)')
+          +checkbox('Можно курить')
+          +checkbox('Можно с питомцами')
+          +checkbox('Можно пригласить гостей (до 10 человек)')
         .form-element__first-part__checkboxbuttons__radio-buttons
-          .form-element__first-part__checkboxbuttons__radio-buttons__name Radio Buttons
-          .form-element__first-part__checkboxbuttons__radio-buttons__button
-            input.form-element__first-part__checkboxbuttons__radio-buttons__button__type(type="radio")
-            .form-element__first-part__checkboxbuttons__radio-buttons__button__type__button-name Мужчина
-          .form-element__first-part__checkboxbuttons__radio-buttons__button
-            input.form-element__first-part__checkboxbuttons__radio-buttons__button__type(type="radio")
-            .form-element__first-part__checkboxbuttons__radio-buttons__button__type__button-name Женщина
+          .form-element__first-part__checkboxbuttons__radio-buttons__title.subsubtitle Radio Buttons
+          .form-element__first-part__checkboxbuttons__radio-buttons__radio-button
+            +radio-button('Мужчина', 'button')
+            +radio-button('Женщина', 'button')
       .form-element__first-part__buttons
     .form-element__second-part
       .form-element__second-part__dropdown
