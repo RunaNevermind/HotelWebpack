@@ -1,0 +1,7 @@
+mixin toggle(title='',name='')
+  .toggle
+    label.toggle__wrap
+      input(type="checkbox" class='toggle__wrap__button' name=name)
+      span.toggle__wrap__slider
+      span.toggle__wrap__name.text #{title}
+  

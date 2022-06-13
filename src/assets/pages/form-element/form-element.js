@@ -1,6 +1,8 @@
 import './calendar/calendar.js';
 import './form-element.scss';
-import './dropdown-quest/dropdown-quest.js'
-import './input/input.js'
-import './checkbox/checkbox.js'
+import './dropdown-quest/dropdown-quest.js';
+import './input/input.js';
+import './checkbox/checkbox.js';
+import './radio-button/radio-button.js';
+import './toggle/toggle.js';
 import './radio-button/radio-button.js'
