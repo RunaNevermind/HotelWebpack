@@ -1,0 +1,62 @@
+$purple:#BC9CFF;
+$green:#6FCF97;
+$darkshade:#1F2041;
+$darkshade-light:rgba(31, 32, 65, 0.25);
+$darkshade-half:rgba(31, 32, 65, 0.5);
+$darkshade-dark:rgba(31, 32, 65, 0.75);
+$gradient:linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
+$green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+
+.like-button__wrap{
+    display: flex;
+    margin-right: 10px;
+}
+
+.like-button__wrap__button{
+    display: none;
+}
+
+.like-button__wrap__slider{
+    margin-top: 2px;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $darkshade-light;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.like-button__wrap__slider::before{
+    color: $darkshade-light;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    top: 15%;
+    left: 10%;
+    padding-top: 1px;
+}
+
+.like-button__wrap__button:checked + .like-button__wrap__slider::before{
+    content: "\e903";
+    position: absolute;
+    color: $purple;
+    width: 14px;
+    height: 14px;
+    transition: .4s;
+}
+
+.like-button__wrap__button:checked + .like-button__wrap__slider{
+    border: 1px solid $purple;
+}
+
+.like-button__wrap__like{
+    user-select: none;    
+    color: $darkshade-dark;
+    font-family: 'Montserrat-Regular', sans-serif;
+    letter-spacing: 0.01rem;
+    margin-left: 25px;
+    position: relative;
+    bottom: 2px;
+    font-size: 10px;
+}

@@ -1,0 +1,7 @@
+mixin like-button(likeCounter, name='')
+  .like-button
+    label.like-button__wrap
+      input(type="checkbox" class='like-button__wrap__button' name=name)
+      .like-button__wrap__slider._icon-favorite-border
+        .text.like-button__wrap__like(value='#{likeCounter}') #{likeCounter}
+

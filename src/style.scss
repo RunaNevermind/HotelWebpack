@@ -121,3 +121,10 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   background-image: $gradient;
   content: "\e90b";
 }
+._icon-star-border,._icon-star{
+  cursor: pointer;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+  background-image: $gradient;
+}

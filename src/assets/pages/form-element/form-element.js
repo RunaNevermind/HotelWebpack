@@ -5,4 +5,5 @@ import './input/input.js';
 import './checkbox/checkbox.js';
 import './radio-button/radio-button.js';
 import './toggle/toggle.js';
-import './radio-button/radio-button.js'
+import './like-button/like-button.js'
+import './rate-button/rate-button.js'

@@ -5,6 +5,8 @@ include ./checkbox/checkbox.pug
 include ./radio-button/radio-button.pug
 include ./toggle/toggle.pug
 include ./like-button/like-button.pug
+include ./rate-button/rate-button.pug
+
 mixin form-element
   .form-element
     .logo
@@ -44,11 +46,17 @@ mixin form-element
         .form-element__first-part__toggle
           .form-element__first-part__toggle__title.subsubtitle Toggle
           .form-element__first-part__toggle__toggle
-          +toggle('Получать спецпредложения', 'toggle')
-          +toggle('Получать спецпредложения', 'toggle')
+            +toggle('Получать спецпредложения', 'toggle')
+            +toggle('Получать спецпредложения', 'toggle')
         .form-element__first-part__like
           .form-element__first-part__like__title.subsubtitle Like Button
           .form-element__first-part__like__button
+            +like-button(2, 'like-nonactive')
+            +like-button(12, 'like-active')
+        .form-element__first-part__stars
+          .form-element__first-part__stars__title.subsubtitle rate button
+          .form-element__first-part__stars__rate
+            +rate-button
     .form-element__second-part
       .form-element__second-part__dropdown
       .form-element__second-part__checkboxlist
