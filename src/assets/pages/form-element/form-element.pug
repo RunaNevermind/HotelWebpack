@@ -20,7 +20,7 @@ mixin form-element
         .form-element__first-part__input__hover
           .form-element__first-part__input__hover__title.subsubtitle Text Field 
           .form-element__first-part__input__hover__semitransparent.text Hover/Focus
-        +form-input("text",'Email')
+        +form-input("text", 'Email')
         .form-element__first-part__input__defailt
           .form-element__first-part__input__defailt__text.subsubtitle Dropdown
           .form-element__first-part__input__defailt__dropdown
@@ -46,16 +46,17 @@ mixin form-element
         .form-element__first-part__toggle
           .form-element__first-part__toggle__title.subsubtitle Toggle
           .form-element__first-part__toggle__toggle
-            +toggle('Получать спецпредложения', 'toggle')
-            +toggle('Получать спецпредложения', 'toggle')
+            +toggle('Получать спецпредложения')
+            +toggle('Получать спецпредложения')
         .form-element__first-part__like
           .form-element__first-part__like__title.subsubtitle Like Button
           .form-element__first-part__like__button
-            +like-button(2, 'like-nonactive')
-            +like-button(12, 'like-active')
+            +like-button(2)
+            +like-button(11)
         .form-element__first-part__stars
           .form-element__first-part__stars__title.subsubtitle rate button
           .form-element__first-part__stars__rate
+            +rate-button
             +rate-button
     .form-element__second-part
       .form-element__second-part__dropdown

@@ -1,12 +1,12 @@
-
 $purple:#BC9CFF;
 $green:#6FCF97;
 $darkshade:#1F2041;
 $darkshade-light:rgba(31, 32, 65, 0.25);
 $darkshade-half:rgba(31, 32, 65, 0.5);
 $darkshade-dark:rgba(31, 32, 65, 0.75);
-$gradient:linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+$gradient:linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
 $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
 
 ._icon-arrow{
     text-decoration: none;
@@ -118,4 +118,8 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 .form-element__first-part__stars__title{
     margin-top: 40px;
     margin-bottom: 15px;
+}
+
+.form-element__first-part__stars__rate:nth-child(2n){
+    display: flex;
 }

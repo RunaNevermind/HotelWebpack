@@ -7,13 +7,16 @@ $darkshade-dark:rgba(31, 32, 65, 0.75);
 $gradient:linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
 $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
+
 .toggle{
     margin-right: 20px;
 }
+
 .toggle__wrap{
     display: flex;
 
 }
+
 .toggle__wrap__button{
     display: none;
 }
