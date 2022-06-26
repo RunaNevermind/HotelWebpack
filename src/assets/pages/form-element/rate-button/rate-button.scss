@@ -9,6 +9,45 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 .rate-button{
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.rate-button__star{
+    font-size: 15px;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.rate-button__star::before{
+    content: "\e906";
+}
+
+.rate-button__star:hover:before{
+    content: "\e905";
+}
+
+.rate-button__star:checked:before{
+    content: "\e905";
+}
+
+.rate-button__star:checked,
+.rate-button__star:checked ~ .rate-button__star::before {
+    content: "\e905";
+}
+
+.rate-button__star:hover,
+.rate-button__star:hover ~ .rate-button__star::before {
+    content: "\e905";
+}
+  
+/*
+.rate-button{
+    display: flex;
     margin-right: 20px;
 }
 
@@ -32,6 +71,5 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     content: "\e906";   
 }
 
-li:nth-child(odd) {
-    content: "\e905";
-}
+
+*/

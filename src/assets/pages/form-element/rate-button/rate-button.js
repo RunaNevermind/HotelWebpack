@@ -1,5 +1,5 @@
 import'./rate-button.scss';
-
+/*
 const star1 = document.querySelector('#star1');
 const star2 = document.querySelector('#star2');
 const star3 = document.querySelector('#star3');
@@ -14,3 +14,5 @@ var starButton = document.querySelector('.rate-button__star')
 star.addEventListener('click', function(){
     console.log(starButton.value)
 })
+
+*/

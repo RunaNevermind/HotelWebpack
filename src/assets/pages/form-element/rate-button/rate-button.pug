@@ -1,17 +1,4 @@
-mixin rate-button 
+mixin rate-button(count=5, group ='group')
   .rate-button
-    .rate-button__star
-      input(type="checkbox", class="rate-button__input", id="star1")
-      label(for="star1", class="rate-button__label", value=1)._icon-star-border._icon-star
-    .rate-button__star
-      input(type="checkbox", class="rate-button__input", id="star2")
-      label(for="star2", class="rate-button__label", value=2)._icon-star-border._icon-star
-    .rate-button__star 
-      input(type="checkbox", class="rate-button__input", id="star3")
-      label(for="star3", class="rate-button__label", value=3)._icon-star-border._icon-star
-    .rate-button__star 
-      input(type="checkbox", class="rate-button__input", id="star4")
-      label(for="star4", class="rate-button__label", value=4)._icon-star-border._icon-star
-    .rate-button__star
-      input(type="checkbox", class="rate-button__input", id="star5")
-      label(for="star5", class="rate-button__label", value=5)._icon-star-border._icon-star 
+    - for(let i=count; i > 0 ;i--)
+      input._icon-favorite-border.rate-button__star._icon-star(type="radio", group, name=group, data-index=i)
