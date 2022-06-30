@@ -1,4 +1,4 @@
-mixin rate-button(count=5, group ='group')
-  .rate-button
+mixin rate-button(count=5, className ='rate')
+  .rate-button(class=className)
     - for(let i=count; i > 0 ;i--)
-      input._icon-favorite-border.rate-button__star._icon-star(type="radio", group, name=group, data-index=i)
+      input.rate-button__star._icon-favorite-border._icon-star(type="radio")

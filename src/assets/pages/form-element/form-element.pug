@@ -51,13 +51,15 @@ mixin form-element
         .form-element__first-part__like
           .form-element__first-part__like__title.subsubtitle Like Button
           .form-element__first-part__like__button
-            +like-button(2)
-            +like-button(11)
+            +like-button(2, '_1')
+            +like-button(11, '_2')
+            +like-button(8, '_3')
+            +like-button(124, '_4')
         .form-element__first-part__stars
           .form-element__first-part__stars__title.subsubtitle rate button
           .form-element__first-part__stars__rate
-            +rate-button
-            +rate-button
+            +rate-button(5, 'df')
+            +rate-button(5, 'we')
     .form-element__second-part
       .form-element__second-part__dropdown
       .form-element__second-part__checkboxlist

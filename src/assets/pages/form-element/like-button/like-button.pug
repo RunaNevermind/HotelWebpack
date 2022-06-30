@@ -1,6 +1,6 @@
-mixin like-button(likeCounter=0)
-  .like-button
-    label.like-button__wrap(for='.like-button__wrap__button')
-      input(type="checkbox", class='like-button__wrap__button')
-      span.like-button__wrap__like._icon-favorite-border._icon-favorite
-        span.like-button__wrap__like__text.text #{likeCounter}
+mixin like-button(likeCounter=0, idNumber='_0')
+  .like-button(id=idNumber)
+    label.like-button__wrap(for='.like-button__wrap-button')
+      input(type="checkbox", class='like-button__wrap-button')
+      span.like-button__wrap-like._icon-favorite-border._icon-favorite
+        span.like-button__wrap-like-text.text #{likeCounter}

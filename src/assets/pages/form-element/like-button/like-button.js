@@ -1,20 +1,24 @@
 import './like-button.scss';
 
-let increment = document.querySelector('.like-button__wrap');
-let likeCounter = document.querySelector('.like-button__wrap__like__text').innerHTML;
-let button = document.querySelector('.like-button__wrap__button');
-
-document.querySelector('.like-button__wrap__like__text').innerHTML=likeCounter;
+let increments = document.querySelectorAll('.like-button[id*="_"]');
+let likeCounter = document.querySelector('.like-button__wrap-like-text').innerHTML;
+let button = document.querySelector('.like-button__wrap-button');
 let like=likeCounter;
-increment.addEventListener('click', function(){
-    if(like==likeCounter){
-        like++;         
-        button.checked=true;
-        return document.querySelector('.like-button__wrap__like__text').innerHTML=like;
-    }
-    else{
-        like--;
-        button.checked=false;
-        return document.querySelector('.like-button__wrap__like__text').innerHTML=like;
-    }
-})    
+
+increments.forEach(function(increment){
+    increment.addEventListener('click', function(){
+        console.log(increment.id)
+        if(like==likeCounter){
+            like++;         
+            button.checked=true;
+            document.querySelector('.like-button__wrap-like-text').innerHTML=like;
+        }
+        else{
+            like--;
+            button.checked=false;
+            document.querySelector('.like-button__wrap-like-text').innerHTML=like;
+        }
+    });
+});
+   
+ 

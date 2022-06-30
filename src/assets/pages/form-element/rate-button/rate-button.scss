@@ -44,32 +44,3 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 .rate-button__star:hover ~ .rate-button__star::before {
     content: "\e905";
 }
-  
-/*
-.rate-button{
-    display: flex;
-    margin-right: 20px;
-}
-
-.rate-button__input{
-    display: none;
-}
-
-.rate-button__input:hover + .rate-button__label::before{
-    content: "\e905";
-}
-
-.rate-button__input:checked + .rate-button__label::before{
-    content: "\e905";
-}
-
-.rate-button .rate-button__input:checked ~ .rate-button__label{
-    content: "\e906";
-}
-
-.rate-button > input:checked ~ label {
-    content: "\e906";   
-}
-
-
-*/

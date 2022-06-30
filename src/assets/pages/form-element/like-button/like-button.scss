@@ -9,19 +9,18 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 .like-button{
     margin-right: 20px;
-    user-select: none;
-
+    user-select: none;    
 }
-
 .like-button__wrap{
+
     cursor: pointer;    
     display: flex;
 }
-.like-button__wrap__button{
+.like-button__wrap-button{
     display: none;
 }
 
-.like-button__wrap__like{
+.like-button__wrap-like{
     content: "\e904";
     width: 40px;
     height: 20px;
@@ -32,7 +31,7 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: $darkshade-half;
 }
 
-.like-button__wrap__like::before{
+.like-button__wrap-like::before{
     content: "\e904";
     cursor: pointer;
 	color: transparent;    
@@ -44,7 +43,7 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     font-size: 12px;
 }
 
-.like-button__wrap__button:checked + .like-button__wrap__like::before{
+.like-button__wrap-button:checked + .like-button__wrap-like::before{
     content: "\e903";
     cursor: pointer;
 	color: transparent;    
@@ -53,11 +52,11 @@ $green-gradient:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     background-image: $gradient;
 }
 
-.like-button__wrap__button:checked + .like-button__wrap__like{
+.like-button__wrap-button:checked + .like-button__wrap-like{
     border: 1px solid $purple;
 }
 
-.like-button__wrap__like__text{
+.like-button__wrap-like-text{
     padding-right: 5px;
     line-height: 19px;
     font-size: 12px;
