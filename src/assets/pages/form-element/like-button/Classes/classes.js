@@ -1,50 +1,47 @@
-
-let likeCounter = document.querySelectorAll('.like-button__wrap-like-text').innerHTML;
-let button = document.querySelectorAll('.like-button__wrap-button');
-let like=likeCounter;
-
+let likeCounter = '.like-button__wrap-like-text';
+let checked = '.like-button__wrap-button';
+let color = '.like-button__wrap-like';
 class Like{
-    constructor(){
-        this.increments = increment;
+    constructor(increment){
+        this.increment = increment;  
         this.init();
     }
 
     init(){
-        console.log('init');
-        this.buttons = button;
-        this.likeCounter = this.like;      
+        this.likeCounter = parseInt(this.increment.querySelector(likeCounter).innerText);
+        this.checked = this.increment.querySelector(checked).checked;
+        this.color=this.increment.querySelector(color);
         this._bindEventListenert();
     }
 
     _bindEventListenert(){
-        this._LikeToggle = this._likeToggle.bind(this);        
-        this.increments.addEventlistener('click', this._likeToggle);
-        console.log('_bindEventListenert');
+        console.log(document.querySelector('.like-button__wrap-like-text').style)
+        this.increment.addEventListener('click', () => this._likeToggle(this.increment,this.likeCounter,this.checked));        
+        this._LikeToggle = this._likeToggle.bind(this);
     }
 
     _likeToggle(){
-        console.log('_likeToggle')
-        if(this.like == this.likeCounter){
-            this._like();
+        if(this.checked===true){
+            this.color.classList.remove('_icon-favorite');
+            this.color.classList.add('_icon-favorite-border');
+            this.color.classList.add('like-button__wrap-like');
+            this.color.classList.remove('like-button__wrap-like__checked');
+            document.querySelector(likeCounter).style.color='$darkshade-half';
+            this.likeCounter--;
+            this.increment.querySelector(likeCounter).innerHTML=this.likeCounter;
+            this.checked=false;
         }
-        else{
-            this._unlike();
+        else{ 
+            this.color.classList.remove('_icon-favorite-border');
+            this.color.classList.add('_icon-favorite');
+            this.color.classList.add('like-button__wrap-like__checked');
+            this.color.classList.remove('like-button__wrap-like');
+            document.querySelector(likeCounter).style.color='$purple';
+            this.likeCounter++;
+            this.increment.querySelector(likeCounter).innerHTML=this.likeCounter;
+            this.checked=true;
         }
     }
-
-    _like(){
-        this.buttons.checked = true;
-        this.like++;
-        this.document.querySelector('.like-button__wrap-like-text').innerHTML=like;
-    }
-
-    _unlike(){
-        this.buttons.checked = false;
-        this.like--;
-        this.document.querySelector('.like-button__wrap-like-text').innerHTML=like;
-    }
-
-    
 }
 
 export default Like;

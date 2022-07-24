@@ -1,6 +1,9 @@
 import './like-button.scss';
 import Like from './Classes/classes'
 
-let increment = document.querySelectorAll('.like-button');
+let increments = document.querySelectorAll('.like-button__wrap');
 
-increment.forEach((i, el) => new Like(el))
+
+
+increments.forEach((increment)=> new Like(increment)
+)
